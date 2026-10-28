@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syed Muhammad Shariq — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: letter;
+      margin: 0.30in 0.40in 0.28in 0.40in;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #111827;
+      background: #ffffff;
+      line-height: 1.28;
+      font-size: 8.7pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 4.5pt;
+      border-bottom: 1.5pt solid #1f2937;
+      padding-bottom: 3pt;
+    }
+
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      line-height: 1.05;
+      margin-bottom: 1.5pt;
+    }
+
+    .title-banner {
+      font-size: 9.4pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 2pt;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3pt 11pt;
+      font-size: 8.2pt;
+      color: #4b5563;
+    }
+
+    .contact-row a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 4.5pt;
+    }
+
+    .section-title {
+      font-size: 9.2pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      border-bottom: 1pt solid #cbd5e1;
+      padding-bottom: 1pt;
+      margin-bottom: 2.5pt;
+    }
+
+    /* SKILLS */
+    .skills-block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2pt;
+      font-size: 8.4pt;
+      line-height: 1.26;
+    }
+
+    .skills-block p strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* EXPERIENCE & PROJECTS */
+    .entry {
+      margin-bottom: 3.5pt;
+      page-break-inside: avoid;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1pt;
+    }
+
+    .entry-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-role {
+      font-weight: 600;
+      color: #1d4ed8;
+    }
+
+    .entry-date {
+      font-size: 8pt;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .entry-tech {
+      font-size: 8pt;
+      font-style: italic;
+      color: #475569;
+      margin-bottom: 1pt;
+    }
+
+    .entry-tech strong {
+      font-style: normal;
+      color: #334155;
+    }
+
+    .badge-fyp {
+      display: inline-block;
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.5pt 3.5pt;
+      background: #ecfdf5;
+      color: #047857;
+      border: 0.5pt solid #a7f3d0;
+      border-radius: 3pt;
+      margin-left: 3pt;
+      vertical-align: middle;
+    }
+
+    ul.bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 9pt;
+      font-size: 8.2pt;
+      color: #1f2937;
+      line-height: 1.24;
+      margin-bottom: 1.2pt;
+      text-align: justify;
+    }
+
+    ul.bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 1.5pt;
+      color: #1d4ed8;
+      font-size: 8.5pt;
+      line-height: 1.2;
+    }
+
+    ul.bullets li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* EDUCATION */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.6pt;
+    }
+
+    .edu-inst {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-degree {
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SYED MUHAMMAD SHARIQ</h1>
+    <div class="title-banner">AI & Computer Vision Systems Engineer</div>
+    <div class="contact-row">
+      <span>📍 Karachi, Pakistan</span>
+      <span>📞 +92 333 2396045</span>
+      <span>✉️ <a href="mailto:syedmuhummedshariq954@gmail.com">syedmuhummedshariq954@gmail.com</a></span>
+      <span>🔗 <a href="https://github.com/Shariq-duet" target="_blank">github.com/Shariq-duet</a></span>
+      <span>💼 <a href="https://linkedin.com/in/syed-muhammad-shariq" target="_blank">linkedin.com/in/syed-muhammad-shariq</a></span>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-block">
+      <p><strong>Languages & Core:</strong> Python (Advanced), C++, Java, SQL, Bash, Linux / Unix</p>
+      <p><strong>Computer Vision & ML:</strong> PyTorch, YOLO (v8/v11), OpenCV, EasyOCR, TensorFlow, MediaPipe, Edge Device Optimization (TensorRT/ONNX), Real-Time Video Streaming (RTSP)</p>
+      <p><strong>AI Systems & Backend:</strong> FastAPI, WebSockets, Google Vertex AI (Gemini 2.5 Flash), AssemblyAI Voice API, Pydantic v2, Asyncio, Edge-TTS, REST APIs</p>
+      <p><strong>Data & DevOps:</strong> Dataset Curation & Annotation (Roboflow, CVAT), Docker, Docker Compose, Git, CI/CD (GitHub Actions), Google Cloud Run, SQLite</p>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section>
+    <div class="section-title">Work Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">LA Consulting Corp <span class="entry-role">— AI Engineer (Computer Vision & Edge Optimization)</span></span>
+        <span class="entry-date">Nov 2025 – Present | Karachi, Pakistan</span>
+      </div>
+      <ul class="bullets">
+        <li>Architected and benchmarked lightweight <strong>YOLOv8 models optimized for edge hardware</strong> and embedded systems, sustaining <strong>30+ FPS</strong> across live video feeds.</li>
+        <li>Automated multi-camera RTSP ingestion and preprocessing pipelines across <strong>10,000+ custom annotated frames</strong>, slashing model training preprocessing turnaround by <strong>35%</strong>.</li>
+        <li>Collaborated with senior engineers to implement zero-latency tracking and recognition features, integrating automated stress-testing and CI validation workflows.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">State Bank of Pakistan (BSC) <span class="entry-role">— Technology & Operations Internee</span></span>
+        <span class="entry-date">June 2026 – August 2026 | Karachi, Pakistan</span>
+      </div>
+      <ul class="bullets">
+        <li>Audited public procurement and enterprise compliance documentation in adherence with PPRA (Public Procurement Regulatory Authority) standards.</li>
+        <li>Coordinated cross-departmental technology event operations, resource allocation, and internal system documentation.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Zam Zam Batteries <span class="entry-role">— Operations & Inventory Systems Assistant</span></span>
+        <span class="entry-date">Feb 2023 – July 2025 | Karachi, Pakistan</span>
+      </div>
+      <ul class="bullets">
+        <li>Digitized inventory logs and client sales records, transitioning manual ledgers to structured data systems to eliminate stock discrepancies and improve order fulfillment accuracy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section>
+    <div class="section-title">Featured Projects</div>
+
+    <!-- Traffic Violation -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Intelligent Traffic Violation Detection System <span class="badge-fyp">Final Year Project / Capstone</span></span>
+        <span class="entry-date"><a href="https://github.com/Shariq-duet/Intelligent-Traffic-Violation-Detection-System" style="color:#1d4ed8; text-decoration:none;">github.com/Shariq-duet/...</a></span>
+      </div>
+      <div class="entry-tech"><strong>Tech:</strong> Python, PyTorch, YOLOv8, OpenCV, EasyOCR, Roboflow, Pandas</div>
+      <ul class="bullets">
+        <li><strong>Dataset Author:</strong> Curated, labeled, and published <strong>2 open-source benchmark datasets on Roboflow & Kaggle</strong> (Helmet compliance & Driver distraction) to solve critical zero-shot training gaps in regional traffic scenarios.</li>
+        <li>Engineered an end-to-end multi-model enforcement pipeline tracking vehicles in custom ROIs to detect <strong>5 violations</strong>: Helmet Compliance, Seatbelt Usage, Phone Distraction, Red-Light Jumping, and Vehicle Closeness/Tailgating.</li>
+        <li>Implemented heuristic crop selection (<code>best_SS.py</code>) scoring sharpness/contrast before feeding plates into <strong>EasyOCR</strong> for automated license reading, achieving <strong>91.4% mAP@50</strong> with real-time multi-lane CCTV inference.</li>
+      </ul>
+    </div>
+
+    <!-- CallBridge -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">CallBridge — Autonomous Voice Negotiation Agent with HITL Safeguards</span>
+        <span class="entry-date"><a href="https://github.com/Shariq-duet/CallBridge" style="color:#1d4ed8; text-decoration:none;">github.com/Shariq-duet/CallBridge</a></span>
+      </div>
+      <div class="entry-tech"><strong>Tech:</strong> Python 3.12, FastAPI, WebSockets, AssemblyAI Voice Agent, Microsoft Edge-TTS, Pydantic v2, Docker</div>
+      <ul class="bullets">
+        <li>Architected an outbound voice agent negotiating phone calls with strict <strong>Human-in-the-Loop (HITL) approval gates</strong>, preventing unauthorized price commitments and personal data disclosures.</li>
+        <li>Engineered a hybrid speech pipeline pairing AssemblyAI's full-duplex Voice Agent API (live turn detection, holding phrases) with free Microsoft edge-tts neural voice generation (322 voices) and in-memory audio caching.</li>
+        <li>Implemented thread-safe session state machines with optimistic concurrency conflict detection (HTTP 409) and containerized deployment with non-root Docker and automated CI checks.</li>
+      </ul>
+    </div>
+
+    <!-- Game Debugger -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Game Debugger — Agentic Multi-Source Bug Triage Pipeline</span>
+        <span class="entry-date"><a href="https://github.com/Shariq-duet/game-debugger-agent" style="color:#1d4ed8; text-decoration:none;">github.com/Shariq-duet/game-debugger-agent</a></span>
+      </div>
+      <div class="entry-tech"><strong>Tech:</strong> Google Vertex AI, Gemini 2.5 Flash, Google Cloud Run, Pydantic v2, Discord API, Python</div>
+      <ul class="bullets">
+        <li>Deployed a 3-phase autonomous agent pipeline on <strong>Google Cloud Run</strong> ingesting noisy multi-source community bug reports across Discord, server logs, and CSV uploads.</li>
+        <li>Engineered a cross-source contradiction-detection algorithm that scores reporter credibility and reconciles conflicting reports prior to generating reproducible Jira tickets and automated code patches.</li>
+      </ul>
+    </div>
+
+    <!-- Rasta-AI -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Rasta-AI — Voice-Guided Banking Assistant for Financial Inclusion <span class="badge-fyp" style="background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe;">National Finalist</span></span>
+        <span class="entry-date">Alibaba Cloud Hackathon 2026</span>
+      </div>
+      <div class="entry-tech"><strong>Tech:</strong> Python, WebSockets, Next.js, Ollama/LLMs, Urdu Speech-to-Text, Audio Processing</div>
+      <ul class="bullets">
+        <li><strong>Top 1.8% Nationwide:</strong> Selected among top 300 teams from 16,000+ submissions; awarded fully sponsored trip to present at National Finals in Islamabad.</li>
+        <li>Engineered a full-duplex bilingual (Urdu & English) voice navigation system to empower non-tech-savvy users in mobile banking.</li>
+        <li>Built a real-time bi-directional WebSocket bridge synchronizing voice intents to UI actions, highlighting target buttons to guide users step-by-step.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HONORS & AWARDS -->
+  <section>
+    <div class="section-title">Honors & Competitions</div>
+    <div class="entry" style="margin-bottom: 2pt;">
+      <ul class="bullets">
+        <li><strong>National Finalist (Top 1.8% of 16,000+ Teams):</strong> Alibaba Cloud AI Hackathon Pakistan 2026. Fully sponsored presentation at Pakistan-China Friendship Center, Islamabad (Oct 2026).</li>
+        <li><strong>Global Hackathon Submissions:</strong> AssemblyAI Voice Agent Hackathon (Built CallBridge with HITL gates) & IBM Bob 2.0 Hackathon (Agentic LLMs with Anthropic Claude).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-entry">
+      <div>
+        <span class="edu-inst">Dawood University of Engineering & Technology (DUET)</span>
+        <span class="edu-degree"> — Bachelor of Science in Computer Science (BSCS)</span>
+      </div>
+      <div class="entry-date">2023 – Expected May 2027 | Karachi, Pakistan</div>
+    </div>
+  </section>
+
+</body>
+</html>

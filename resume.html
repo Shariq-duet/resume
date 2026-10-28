@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syed Muhammad Shariq — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text-main: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-glow: rgba(88, 166, 255, 0.15);
+      --badge-bg: #1f2937;
+      --badge-border: #374151;
+      --success: #3fb950;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-wrapper {
+      max-width: 900px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .top-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #21262d;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #30363d;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-primary {
+      background: #238636;
+      border-color: #2ea043;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2ea043;
+      color: #fff;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    .header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .title-pill {
+      display: inline-block;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .skill-category {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      background: #1f242c;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: #c9d1d9;
+    }
+
+    .badge.highlight {
+      background: rgba(88, 166, 255, 0.12);
+      border-color: rgba(88, 166, 255, 0.4);
+      color: #79c0ff;
+    }
+
+    .experience-item, .project-item {
+      margin-bottom: 24px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .item-company {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .item-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .item-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    ul.bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.92rem;
+      color: #c9d1d9;
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+
+    ul.bullets li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    ul.bullets li strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .project-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pill-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: rgba(63, 185, 80, 0.15);
+      border: 1px solid var(--success);
+      color: #56d364;
+    }
+
+    .pill-badge.ai {
+      background: rgba(163, 113, 247, 0.15);
+      border-color: #a371f7;
+      color: #d2a8ff;
+    }
+
+    .project-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Print Styles for Single / Clean PDF Export */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+        padding: 0 !important;
+      }
+
+      .top-toolbar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background: #ffffff !important;
+      }
+
+      header {
+        border-bottom: 2px solid #e5e7eb !important;
+      }
+
+      h1 {
+        color: #111827 !important;
+      }
+
+      .title-pill, .section-title, .item-company, .project-link, .contact-item a {
+        color: #1d4ed8 !important;
+      }
+
+      .section-title {
+        border-bottom: 1.5px solid #e5e7eb !important;
+      }
+
+      .badge {
+        background: #f3f4f6 !important;
+        border: 1px solid #d1d5db !important;
+        color: #1f2937 !important;
+      }
+
+      .badge.highlight {
+        background: #e0f2fe !important;
+        border-color: #7dd3fc !important;
+        color: #0369a1 !important;
+      }
+
+      ul.bullets li {
+        color: #374151 !important;
+      }
+
+      ul.bullets li::before {
+        color: #1d4ed8 !important;
+      }
+
+      ul.bullets li strong, .item-title, .skill-category {
+        color: #111827 !important;
+      }
+
+      .pill-badge {
+        background: #dcfce7 !important;
+        border-color: #86efac !important;
+        color: #15803d !important;
+      }
+
+      .pill-badge.ai {
+        background: #f3e8ff !important;
+        border-color: #d8b4fe !important;
+        color: #6b21a8 !important;
+      }
+
+      .item-date, .item-subtitle, .contact-grid {
+        color: #4b5563 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-wrapper">
+    
+    <div class="top-toolbar">
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Export to PDF / Print</button>
+      <a class="btn" href="https://github.com/Shariq-duet" target="_blank">🌐 GitHub Profile</a>
+    </div>
+
+    <header>
+      <div class="header-main">
+        <div>
+          <h1>SYED MUHAMMAD SHARIQ</h1>
+          <div class="title-pill">AI & Computer Vision Systems Engineer</div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item">📍 Karachi, Pakistan</div>
+          <div class="contact-item">📞 +92 333 2396045</div>
+          <div class="contact-item">✉️ <a href="mailto:syedmuhummedshariq954@gmail.com">syedmuhummedshariq954@gmail.com</a></div>
+          <div class="contact-item">🔗 <a href="https://github.com/Shariq-duet" target="_blank">github.com/Shariq-duet</a></div>
+          <div class="contact-item">💼 <a href="https://linkedin.com/in/syed-muhammad-shariq" target="_blank">linkedin.com/in/syed-muhammad-shariq</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <div class="section-title">Technical Expertise</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-category">Computer Vision & Deep Learning</div>
+          <div class="badges">
+            <span class="badge highlight">YOLOv8 / YOLOv11</span>
+            <span class="badge highlight">OpenCV</span>
+            <span class="badge highlight">PyTorch</span>
+            <span class="badge">TensorRT</span>
+            <span class="badge">EasyOCR</span>
+            <span class="badge">MediaPipe</span>
+            <span class="badge">TensorFlow</span>
+            <span class="badge">RTSP Streams</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-category">AI Systems & Backend Architecture</div>
+          <div class="badges">
+            <span class="badge highlight">FastAPI</span>
+            <span class="badge highlight">WebSockets</span>
+            <span class="badge highlight">Pydantic v2</span>
+            <span class="badge">Google Vertex AI</span>
+            <span class="badge">AssemblyAI Voice API</span>
+            <span class="badge">Edge-TTS</span>
+            <span class="badge">Asyncio</span>
+            <span class="badge">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-category">Languages & Systems</div>
+          <div class="badges">
+            <span class="badge highlight">Python (Expert)</span>
+            <span class="badge">C++</span>
+            <span class="badge">Java</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Bash / Linux</span>
+            <span class="badge">AST Program Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-category">Data & Infrastructure</div>
+          <div class="badges">
+            <span class="badge highlight">Roboflow / CVAT</span>
+            <span class="badge highlight">Docker / Compose</span>
+            <span class="badge">Git / GitHub Actions</span>
+            <span class="badge">Google Cloud Run</span>
+            <span class="badge">SQLite (WAL)</span>
+            <span class="badge">Pandas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section>
+      <div class="section-title">Work Experience</div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">AI Engineer (Computer Vision & Edge Optimization)</span> — 
+            <span class="item-company">LA Consulting Corp</span>
+          </div>
+          <div class="item-date">Nov 2025 – Present</div>
+        </div>
+        <div class="item-subtitle">Karachi, Pakistan | Full-time Engineering</div>
+        <ul class="bullets">
+          <li>Architected, benchmarked, and deployed lightweight <strong>YOLOv8 object detection pipelines</strong> optimized for edge hardware and embedded micro-servers, sustaining <strong>30+ FPS</strong> real-time throughput.</li>
+          <li>Engineered automated multi-camera RTSP video ingestion and preprocessing pipelines across <strong>10,000+ custom annotated frames</strong>, slashing model training preprocessing latency by <strong>35%</strong>.</li>
+          <li>Collaborated with senior staff to integrate zero-latency tracking algorithms and computer vision inference endpoints into production client-facing microservices.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Technology & Operations Internee</span> — 
+            <span class="item-company">State Bank of Pakistan (BSC)</span>
+          </div>
+          <div class="item-date">June 2026 – August 2026</div>
+        </div>
+        <div class="item-subtitle">Karachi, Pakistan | Public Sector Central Bank</div>
+        <ul class="bullets">
+          <li>Audited technical documentation and statutory compliance procedures adhering to <strong>PPRA (Public Procurement Regulatory Authority)</strong> standards.</li>
+          <li>Coordinated operational logistics and cross-departmental documentation workflows for internal technology initiatives.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Operations & Inventory Systems Assistant</span> — 
+            <span class="item-company">Zam Zam Batteries</span>
+          </div>
+          <div class="item-date">Feb 2023 – July 2025</div>
+        </div>
+        <div class="item-subtitle">Karachi, Pakistan | Commercial Operations</div>
+        <ul class="bullets">
+          <li>Spearheaded digital transformation of stock and sales ledgers, replacing legacy manual paperwork with structured database records to prevent inventory discrepancies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section>
+      <div class="section-title">Featured Projects</div>
+
+      <!-- FYP -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">Intelligent Traffic Violation Detection System</span>
+            <span class="pill-badge">Final Year Project / Capstone</span>
+          </div>
+          <a class="project-link" href="https://github.com/Shariq-duet/Intelligent-Traffic-Violation-Detection-System" target="_blank">View on GitHub ↗</a>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">YOLOv8</span>
+          <span class="badge highlight">EasyOCR</span>
+          <span class="badge highlight">Roboflow Dataset</span>
+          <span class="badge">PyTorch</span>
+          <span class="badge">OpenCV</span>
+          <span class="badge">Pandas</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>Novel Dataset Author:</strong> Curated, annotated, and publicly released <strong>2 novel benchmark datasets on Roboflow & Kaggle</strong> to bridge critical data gaps for South Asian traffic scenarios (helmet compliance and in-cabin phone distractions).</li>
+          <li>Engineered an automated end-to-end enforcement pipeline detecting <strong>5 simultaneous infractions</strong> from CCTV footage: Helmet Compliance, Seatbelt Usage, Mobile Phone Distraction, Red-Light Jumping, and Vehicle Closeness/Tailgating.</li>
+          <li>Built an intelligent vehicle crop selection subsystem (<code>best_SS.py</code>) using sharpness, size, and contrast heuristics before executing plate recognition via <strong>EasyOCR</strong> and persisting evidence to CSV audit ledgers.</li>
+          <li>Trained custom YOLOv8 models achieving <strong>91.4% mAP@50</strong> with real-time video inference across multi-lane traffic streams.</li>
+        </ul>
+      </div>
+
+      <!-- Rasta-AI -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">Rasta-AI — Voice-Guided Banking Assistant for Financial Inclusion</span>
+            <span class="pill-badge">National Finalist (Top 1.8%)</span>
+            <span class="pill-badge ai">Voice AI / Accessibility</span>
+          </div>
+          <span class="item-date">Alibaba Cloud Hackathon 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">Python</span>
+          <span class="badge highlight">WebSockets</span>
+          <span class="badge highlight">Next.js UI</span>
+          <span class="badge">Ollama / LLMs</span>
+          <span class="badge">Urdu & English STT</span>
+          <span class="badge">Dynamic UI Highlighting</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>National Finalist:</strong> Selected among the <strong>top 300 finalist teams out of 16,000+ submissions</strong> across Pakistan in the Alibaba Cloud AI Hackathon; awarded a fully sponsored presentation at the National Finals in Islamabad.</li>
+          <li>Architected a bilingual (Urdu & English) conversational voice assistant designed to overcome financial literacy and digital accessibility barriers for non-tech-savvy bank account holders.</li>
+          <li>Engineered a low-latency bi-directional WebSocket bridge (<code>ws://</code>) linking the Python AI agent to a Next.js banking frontend, automatically highlighting target buttons and step-by-step navigation paths as instructions are spoken.</li>
+          <li>Integrated intent parsing pipelines combining local LLM reasoning with fast phonetic/keyword fallbacks to maintain sub-second turnarounds during complex banking queries.</li>
+        </ul>
+      </div>
+
+      <!-- CallBridge -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">CallBridge — Autonomous Voice Negotiation Agent</span>
+            <span class="pill-badge ai">AssemblyAI Hackathon</span>
+          </div>
+          <a class="project-link" href="https://github.com/Shariq-duet/CallBridge" target="_blank">View on GitHub ↗</a>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">FastAPI</span>
+          <span class="badge highlight">WebSockets</span>
+          <span class="badge highlight">AssemblyAI Voice API</span>
+          <span class="badge">Edge-TTS</span>
+          <span class="badge">Pydantic v2</span>
+          <span class="badge">Docker</span>
+        </div>
+        <ul class="bullets">
+          <li>Built and submitted for the <strong>AssemblyAI Voice Agent Hackathon (lablab.ai)</strong>: architected an outbound voice agent capable of negotiating business phone calls with strict <strong>Human-in-the-Loop (HITL) approval gates</strong> to prevent unauthorized financial commitments.</li>
+          <li>Engineered a hybrid multi-tier speech stack pairing AssemblyAI's full-duplex Voice Agent API (live turn detection, holding phrases) with free Microsoft edge-tts neural voice generation (322 voices) and in-memory caching.</li>
+          <li>Implemented thread-safe session state machines with optimistic concurrency conflict detection (HTTP 409) and containerized with non-root Docker and CI workflows.</li>
+        </ul>
+      </div>
+
+      <!-- Game Debugger -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">Game Debugger — Agentic Multi-Source Bug Triage Pipeline</span>
+            <span class="pill-badge ai">Multi-Agent LLM</span>
+          </div>
+          <a class="project-link" href="https://github.com/Shariq-duet/game-debugger-agent" target="_blank">View on GitHub ↗</a>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">Google Vertex AI</span>
+          <span class="badge highlight">Gemini 2.5 Flash</span>
+          <span class="badge highlight">Google Cloud Run</span>
+          <span class="badge">Pydantic v2</span>
+          <span class="badge">Python</span>
+        </div>
+        <ul class="bullets">
+          <li>Deployed a 3-phase autonomous agent pipeline on <strong>Google Cloud Run</strong> ingesting noisy multi-source community bug reports (Discord API, server logs, CSVs).</li>
+          <li>Engineered a cross-source contradiction-detection algorithm that scores source credibility and reconciles conflicting reports prior to generating reproducible Jira tickets and automated code patches.</li>
+        </ul>
+      </div>
+
+      <!-- ChangeProof -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">ChangeProof — AST Architectural Invariant Engine</span>
+            <span class="pill-badge">Static Analysis</span>
+          </div>
+          <a class="project-link" href="https://github.com/Shariq-duet/ChangeProof" target="_blank">View on GitHub ↗</a>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">Python (ast)</span>
+          <span class="badge">Static Code Analysis</span>
+          <span class="badge">CI/CD Automation</span>
+          <span class="badge">GitHub Actions</span>
+        </div>
+        <ul class="bullets">
+          <li>Built an automated linter using Python's native Abstract Syntax Tree (<code>ast</code>) module to enforce Architectural Decision Record (ADR) invariants during pull request checks.</li>
+          <li>Catches architectural drift, breaking interface contracts, and multi-tenant isolation breaches before merge.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HONORS & HACKATHONS -->
+    <section>
+      <div class="section-title">Honors & Competitions</div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">National Finalist (Top 1.8% Nationwide)</span> — 
+            <span class="item-company">Alibaba Cloud AI Hackathon Pakistan 2026</span>
+          </div>
+          <div class="item-date">October 2026</div>
+        </div>
+        <div class="item-subtitle">Organized by Alibaba Cloud, COGNIX, Alkhidmat Foundation & Bano Qabil | Islamabad, Pakistan</div>
+        <ul class="bullets">
+          <li>Selected as one of only <strong>300 finalist teams out of 16,000+ initial submissions</strong> across the country.</li>
+          <li>Awarded a <strong>fully sponsored trip and accommodation</strong> to pitch "Rasta-AI / General Account Activity Helper" in the Financial Inclusion track at the Pakistan-China Friendship Center, Islamabad.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Global AI Hackathon Submissions & Certifications</span> — 
+            <span class="item-company">LabLab.ai</span>
+          </div>
+          <div class="item-date">September 2026</div>
+        </div>
+        <div class="item-subtitle">International Online Hackathons</div>
+        <ul class="bullets">
+          <li><strong>AssemblyAI - Voice Agent Hackathon:</strong> Built CallBridge, a full-duplex conversational voice agent integrating AssemblyAI Guardrails, AgentOps, and realtime streaming speech recognition.</li>
+          <li><strong>IBM Bob 2.0 Hackathon:</strong> Architected agentic workflow solutions utilizing IBM cloud platforms, Anthropic Claude, and agent tool ecosystems.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Bachelor of Science in Computer Science (BSCS)</span> — 
+            <span class="item-company">Dawood University of Engineering & Technology (DUET)</span>
+          </div>
+          <div class="item-date">2023 – Expected May 2027</div>
+        </div>
+        <div class="item-subtitle">Karachi, Pakistan | Relevant Coursework: Data Structures, Algorithms, Computer Vision, Operating Systems, Database Systems</div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Binaries and installers
+*.exe
+*.msi
+*.zip
+
+# LibreOffice lock files
+.~lock.*
+
+# OS generated files
+Thumbs.db
+.DS_Store

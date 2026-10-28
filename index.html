@@ -394,8 +394,7 @@
   <div class="resume-wrapper">
     
     <div class="top-toolbar">
-      <a class="btn btn-primary" href="./resume.pdf" download="Syed_Muhammad_Shariq_Resume.pdf">📥 Download PDF</a>
-      <button class="btn" onclick="window.print()">🖨️ Print</button>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Export to PDF / Print</button>
       <a class="btn" href="https://github.com/Shariq-duet" target="_blank">🌐 GitHub Profile</a>
     </div>
 
@@ -552,12 +551,38 @@
         </ul>
       </div>
 
+      <!-- Rasta-AI -->
+      <div class="project-item">
+        <div class="item-header">
+          <div class="project-header-left">
+            <span class="item-title">Rasta-AI — Voice-Guided Banking Assistant for Financial Inclusion</span>
+            <span class="pill-badge">National Finalist (Top 1.8%)</span>
+            <span class="pill-badge ai">Voice AI / Accessibility</span>
+          </div>
+          <span class="item-date">Alibaba Cloud Hackathon 2026</span>
+        </div>
+        <div class="tag-row">
+          <span class="badge highlight">Python</span>
+          <span class="badge highlight">WebSockets</span>
+          <span class="badge highlight">Next.js UI</span>
+          <span class="badge">Ollama / LLMs</span>
+          <span class="badge">Urdu & English STT</span>
+          <span class="badge">Dynamic UI Highlighting</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>National Finalist:</strong> Selected among the <strong>top 300 finalist teams out of 16,000+ submissions</strong> across Pakistan in the Alibaba Cloud AI Hackathon; awarded a fully sponsored presentation at the National Finals in Islamabad.</li>
+          <li>Architected a bilingual (Urdu & English) conversational voice assistant designed to overcome financial literacy and digital accessibility barriers for non-tech-savvy bank account holders.</li>
+          <li>Engineered a low-latency bi-directional WebSocket bridge (<code>ws://</code>) linking the Python AI agent to a Next.js banking frontend, automatically highlighting target buttons and step-by-step navigation paths as instructions are spoken.</li>
+          <li>Integrated intent parsing pipelines combining local LLM reasoning with fast phonetic/keyword fallbacks to maintain sub-second turnarounds during complex banking queries.</li>
+        </ul>
+      </div>
+
       <!-- CallBridge -->
       <div class="project-item">
         <div class="item-header">
           <div class="project-header-left">
             <span class="item-title">CallBridge — Autonomous Voice Negotiation Agent</span>
-            <span class="pill-badge ai">Agentic Voice AI</span>
+            <span class="pill-badge ai">AssemblyAI Hackathon</span>
           </div>
           <a class="project-link" href="https://github.com/Shariq-duet/CallBridge" target="_blank">View on GitHub ↗</a>
         </div>
@@ -570,7 +595,7 @@
           <span class="badge">Docker</span>
         </div>
         <ul class="bullets">
-          <li>Architected an outbound voice agent capable of negotiating business phone calls with strict <strong>Human-in-the-Loop (HITL) approval gates</strong> to prevent unauthorized financial commitments.</li>
+          <li>Built and submitted for the <strong>AssemblyAI Voice Agent Hackathon (lablab.ai)</strong>: architected an outbound voice agent capable of negotiating business phone calls with strict <strong>Human-in-the-Loop (HITL) approval gates</strong> to prevent unauthorized financial commitments.</li>
           <li>Engineered a hybrid multi-tier speech stack pairing AssemblyAI's full-duplex Voice Agent API (live turn detection, holding phrases) with free Microsoft edge-tts neural voice generation (322 voices) and in-memory caching.</li>
           <li>Implemented thread-safe session state machines with optimistic concurrency conflict detection (HTTP 409) and containerized with non-root Docker and CI workflows.</li>
         </ul>
@@ -616,6 +641,41 @@
         <ul class="bullets">
           <li>Built an automated linter using Python's native Abstract Syntax Tree (<code>ast</code>) module to enforce Architectural Decision Record (ADR) invariants during pull request checks.</li>
           <li>Catches architectural drift, breaking interface contracts, and multi-tenant isolation breaches before merge.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HONORS & HACKATHONS -->
+    <section>
+      <div class="section-title">Honors & Competitions</div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">National Finalist (Top 1.8% Nationwide)</span> — 
+            <span class="item-company">Alibaba Cloud AI Hackathon Pakistan 2026</span>
+          </div>
+          <div class="item-date">October 2026</div>
+        </div>
+        <div class="item-subtitle">Organized by Alibaba Cloud, COGNIX, Alkhidmat Foundation & Bano Qabil | Islamabad, Pakistan</div>
+        <ul class="bullets">
+          <li>Selected as one of only <strong>300 finalist teams out of 16,000+ initial submissions</strong> across the country.</li>
+          <li>Awarded a <strong>fully sponsored trip and accommodation</strong> to pitch "Rasta-AI / General Account Activity Helper" in the Financial Inclusion track at the Pakistan-China Friendship Center, Islamabad.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Global AI Hackathon Submissions & Certifications</span> — 
+            <span class="item-company">LabLab.ai</span>
+          </div>
+          <div class="item-date">September 2026</div>
+        </div>
+        <div class="item-subtitle">International Online Hackathons</div>
+        <ul class="bullets">
+          <li><strong>AssemblyAI - Voice Agent Hackathon:</strong> Built CallBridge, a full-duplex conversational voice agent integrating AssemblyAI Guardrails, AgentOps, and realtime streaming speech recognition.</li>
+          <li><strong>IBM Bob 2.0 Hackathon:</strong> Architected agentic workflow solutions utilizing IBM cloud platforms, Anthropic Claude, and agent tool ecosystems.</li>
         </ul>
       </div>
     </section>
