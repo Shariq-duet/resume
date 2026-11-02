@@ -1,5 +1,5 @@
 # SYED MUHAMMAD SHARIQ
-**AI & Computer Vision Systems Engineer**  
+**AI, Computer Vision & Backend Systems Engineer**  
 Karachi, Pakistan | +92 333 2396045 | syedshariq954@gmail.com  
 [GitHub: github.com/Shariq-duet](https://github.com/Shariq-duet) | [LinkedIn: linkedin.com/in/syed-muhammad-shariq](https://linkedin.com/in/syed-muhammad-shariq)
 
@@ -7,19 +7,19 @@ Karachi, Pakistan | +92 333 2396045 | syedshariq954@gmail.com
 
 ### TECHNICAL SKILLS
 * **Languages:** Python, C++, Java, SQL, Bash, Linux/Unix
-* **Computer Vision & ML:** PyTorch, YOLO (v8/v11), OpenCV, EasyOCR, TensorFlow, MediaPipe, Edge Device Optimization (TensorRT/ONNX), Real-Time Video Streaming (RTSP)
-* **AI Systems & Backend:** FastAPI, WebSockets, Google Vertex AI (Gemini 2.5 Flash), AssemblyAI Voice API, Pydantic v2, Asyncio, Edge-TTS, REST APIs
-* **Data & DevOps:** Dataset Curation & Annotation (Roboflow, CVAT), Docker, Docker Compose, Git, CI/CD (GitHub Actions), Google Cloud Run, SQLite
+* **Backend & Systems:** FastAPI, WebSockets, REST APIs, Microservices, Asyncio, Pydantic v2, Google Vertex AI, Edge-TTS
+* **Computer Vision & ML:** PyTorch, YOLO (v8/v11), OpenCV, EasyOCR, Edge Device Optimization (TensorRT/ONNX), RTSP Video Streaming
+* **DevOps & Tools:** Docker, Docker Compose, Git, CI/CD (GitHub Actions), Google Cloud Run, Dataset Annotation (Roboflow, CVAT), SQLite
 
 ---
 
 ### WORK EXPERIENCE
 
-**LA Consulting Corp** — *AI Engineer (Computer Vision & Edge Optimization)*  
+**LA Consulting Corp** — *AI & Backend Systems Engineer*  
 *Nov 2025 – Present | Karachi, Pakistan*
+* Architected backend inference microservices and automated multi-camera RTSP ingestion pipelines across 10,000+ custom annotated frames, cutting preprocessing turnaround by 35%.
 * Benchmarked and deployed quantized YOLOv8 models on edge hardware, sustaining 30+ FPS across live camera streams.
-* Automated multi-camera RTSP ingestion and annotation pipelines across 10,000+ custom frames, reducing preprocessing turnaround by 35%.
-* Built low-latency object tracking and recognition modules integrated into production microservices with CI validation testing.
+* Designed low-latency REST and WebSocket API endpoints for real-time tracking, integrated with automated CI validation.
 
 **Global Center for Rehumanization of Democracy (GCRD)** — *Speech & Data Researcher*  
 *Sept 2026 – Present | Karachi, Pakistan*
