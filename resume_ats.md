@@ -1,6 +1,6 @@
 # SYED MUHAMMAD SHARIQ
 **AI, Computer Vision & Backend Systems Engineer**  
-Karachi, Pakistan | +92 333 2396045 | syedshariq954@gmail.com  
+Karachi, Pakistan | +92 339 0068971 (Call) | +92 333 2396045 (WhatsApp) | syedshariq954@gmail.com  
 [GitHub: github.com/Shariq-duet](https://github.com/Shariq-duet) | [LinkedIn: linkedin.com/in/syed-muhammad-shariq](https://linkedin.com/in/syed-muhammad-shariq)
 
 ---
